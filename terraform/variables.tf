@@ -10,12 +10,12 @@ locals {
 
 variable number_of_controller{
   description = "The number of controller, only acts as controller"
-  default = 2
+  default = 0
 }
 
 variable number_of_etcd{
   description = "The number of etcd, only acts as etcd"
-  default = 2
+  default = 0
 }
 
 variable number_of_controller_etcd{
@@ -25,12 +25,12 @@ variable number_of_controller_etcd{
 
 variable number_of_worker{
   description = "The number of worker nodes"
-  default = 3
+  default = 14
 }
 
 variable cluster_id_tag{
   description = "Cluster ID tag for kubespray"
-  default = "alice"
+  default = "steve"
 }
 
 variable cluster_id_value{
@@ -77,7 +77,7 @@ variable elb_name {
 }
 
 variable owner {
-  default = "alicek106"
+  default = "steve"
 }
 
 variable ansibleFilter {
@@ -130,10 +130,10 @@ variable etcd_instance_type {
   default = "t2.small"
 }
 variable controller_instance_type {
-  default = "t2.small"
+  default = "t2.medium"
 }
 variable worker_instance_type {
-  default = "t2.small"
+  default = "t2.micro"
 }
 
 
